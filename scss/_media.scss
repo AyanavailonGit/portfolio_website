@@ -1,0 +1,128 @@
+//  Tablets & Smaller
+
+@media(max-width:800px) {
+  #header-home {
+    height: 30rem;
+
+    &-content {
+      padding-top: 5rem;
+    }
+  }
+}
+
+// smartphones
+
+@media(max-width :600px) {
+  #main-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #header {
+
+    &-home {
+      height: 10rem;
+      border-bottom: 5px solid $main-color;
+      background-position: 20% 30%;
+    }
+
+    &-inner {
+      height: 10rem;
+    }
+  }
+
+  .header-content {
+    display: none;
+  }
+
+  // Stack grid-columns
+  #home-a .specials,
+  #home-b .stats,
+  #home-c .process,
+  #about-d .testimonials,
+  .items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #home-a .specials div {
+    border-bottom: 1.5px solid $main-color;
+    padding-bottom: 15px;
+
+    &:nth-child(4) {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+
+  #home-b .stats div {
+    padding: 2rem 0 1rem 0rem;
+  }
+
+  // F00TER
+  #main-footer {
+    height: 7rem;
+
+    .footer-content {
+      flex-direction: column;
+      padding: 5px;
+      height: 5rem;
+
+      .social i {
+        border: none;
+      }
+    }
+  }
+
+
+  // About
+  .about-info {
+    grid-template-areas:
+      'bio-image'
+      'bio'
+      'award-1'
+      'award-2'
+      'award-3';
+  }
+
+  #about-c {
+    display: none;
+
+  }
+
+  // CONTACT-INFO
+  #contact-a {
+
+    .text-fields {
+      grid-template-areas:
+        'name'
+        'subject'
+        'email'
+        'number'
+        'message';
+      padding: 5px;
+    }
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+
+    div {
+      padding: 20px;
+      margin-top: 15px;
+      border-bottom: 0.5px solid $main-color;
+
+      &:nth-child(3) {
+        border-bottom: none;
+        padding-bottom: 5px;
+      }
+    }
+  }
+
+  #contact-c {
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+}
